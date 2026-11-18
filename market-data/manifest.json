@@ -1,0 +1,23 @@
+{
+  "source": "Dukascopy",
+  "priceSide": "bid",
+  "timeframe": "M1",
+  "timezone": "UTC",
+  "from": "2026-04-22",
+  "toExclusive": "2026-05-22",
+  "generatedAt": "2026-11-18T14:11:00.616Z",
+  "files": {
+    "EURUSD": {
+      "path": "market-data/eurusd-m1-bid-2026-04-22-2026-05-22.csv",
+      "candles": 36720
+    },
+    "GBPUSD": {
+      "path": "market-data/gbpusd-m1-bid-2026-04-22-2026-05-22.csv",
+      "candles": 36720
+    },
+    "AUDUSD": {
+      "path": "market-data/audusd-m1-bid-2026-04-22-2026-05-22.csv",
+      "candles": 36720
+    }
+  }
+}
