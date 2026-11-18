@@ -14,7 +14,7 @@ for (const symbol of symbols) {
   const destination = join(outputDir, filename);
   try {
     if (!existsSync(destination) || readFileSync(destination, 'utf8').trim().split('\n').length < 100) {
-      execFileSync('npx', ['--yes', 'dukascopy-node', '-i', symbol, '-from', from, '-to', to, '-t', 'm1', '-f', 'csv', '-p', 'bid', '--cache', '--retries', '3', '--batch-size', '5', '--batch-pause', '2000', '-dir', outputDir], { stdio: 'inherit', timeout: 1500000 });
+      execFileSync('npx', ['--yes', 'dukascopy-node', '-i', symbol, '-from', from, '-to', to, '-t', 'm1', '-f', 'csv', '-p', 'bid', '--cache', '--retries', '3', '-bs', '5', '-bp', '2000', '-dir', outputDir], { stdio: 'inherit', timeout: 1500000 });
     }
     if (!existsSync(destination)) throw new Error('Missing output file: ' + destination);
     const content = readFileSync(destination, 'utf8');
